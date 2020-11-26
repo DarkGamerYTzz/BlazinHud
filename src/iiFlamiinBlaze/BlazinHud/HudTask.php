@@ -47,6 +47,7 @@ class HudTask extends Task{
 				"{level}",
 				"{tps}",
 				"{motd}",
+				"{rank}",
 				"{money}",
 				"{player}",
 			], [
