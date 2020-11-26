@@ -75,6 +75,12 @@ class BlazinHud extends PluginBase implements Listener{
 		return true;
 	}
 
+	private function reviewAllPlugins(Player $player, string $message) : string{
+
+		$PurePerms = $this->getServer()->getPluginManager()->getPlugin("PurePerms");
+		if (!is_null($PurePerms)) {
+			$message = str_replace('{rank}', $PurePerms->getUserDataMgr()->getGroup($player)->getName(), $message);	
+
 	protected function economyCheck() : bool{
 		if($this->getConfig()->get("economy") === "on"){
 			if($this->getServer()->getPluginManager()->getPlugin("EconomyAPI") === null){
