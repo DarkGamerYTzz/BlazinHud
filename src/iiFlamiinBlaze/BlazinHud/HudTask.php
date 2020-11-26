@@ -61,7 +61,7 @@ class HudTask extends Task{
 				BlazinHud::getInstance()->getServer()->getTicksPerSecond(),
 				BlazinHud::getInstance()->getServer()->getMotd(),
 				BlazinHud::getInstance()->getServer()->getPluginManager()->getPlugin("EconomyAPI")->getInstance()->myMoney($this->player),
-				BlazinHud::getInstance()->getServer()->getPluginManager()->getPlugin("PurePerms")->getInstance()->($this->player)
+				BlazinHud::getInstance()->getServer()->getPluginManager()->getPlugin("PurePerms")->getInstance()->getGroup($this->player)
 				$this->player->getName()
 			], $hud);
 			$this->player->sendPopup($hud);
